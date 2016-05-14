@@ -1,0 +1,18 @@
+.demo-button button, .demo-button a {
+  margin: 8px;
+  text-transform: uppercase; }
+
+.demo-button section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f7;
+  margin: 8px; }
+
+.demo-button p {
+  padding: 5px 15px; }

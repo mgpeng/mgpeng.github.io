@@ -1,0 +1,9 @@
+
+<h3>Todo List</h3>
+<ul class="list-unstyled">
+        <li *ngFor="let todo of todos">
+            <input type="checkbox" [(ngModel)]="todo.done" />
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+</ul>
+<todo-form (newTask)="addNewTodo($event)"></todo-form>

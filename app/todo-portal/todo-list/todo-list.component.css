@@ -1,0 +1,16 @@
+.list-unstyled{
+    list-style-type:none;
+}
+.done-true{
+    text-decoration: line-through;
+    color: bisque;
+}
+.showHigh{
+    height:3em;
+}
+.redBG{
+    background-color: sandybrown;
+}
+.showWide{
+    width:6em;
+}
