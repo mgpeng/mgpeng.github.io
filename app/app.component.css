@@ -1,5 +1,19 @@
-h1 {
-  text-align: center;
-  font-size: 1.2em;
-  color: #999;
-  margin-bottom: 0; }
+.xxj-md-nav-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .xxj-md-nav-list .xxj-md-list-item {
+    text-align: center; }
+    .xxj-md-nav-list .xxj-md-list-item .xxj-md-raised-button {
+      font-size: 1em;
+      padding: 0.5em;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em; }

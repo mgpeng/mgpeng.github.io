@@ -98,7 +98,7 @@ var DemoApp = (function () {
             new router_1.Route({ path: '/list', component: list_demo_1.ListDemo }),
             new router_1.Route({ path: '/live-announcer', component: live_announcer_demo_1.LiveAnnouncerDemo }),
             new router_1.Route({ path: '/gestures', component: gestures_demo_1.GesturesDemo }),
-            new router_1.Route({ path: '/grid-list', component: grid_list_demo_1.GridListDemo }),
+            new router_1.Route({ path: '/grid-list', component: grid_list_demo_1.GridListDemo })
         ]), 
         __metadata('design:paramtypes', [])
     ], DemoApp);
