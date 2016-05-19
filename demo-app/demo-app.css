@@ -1,4 +1,6 @@
 .demo-root {
+  position: relative;
+  top: 15%;
   font-family: Roboto, 'Helvetica Neue', sans-serif; }
   .demo-root * {
     -webkit-font-smoothing: antialiased;

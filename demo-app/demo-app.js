@@ -10,6 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+//import {Renderer} from '@angular/core';   //--no know who use is until now
+var core_2 = require('@angular/core'); //----for make provider overlay and hammer
+//---- MdIcon need HTTP and viewProviders --if use external img file  mdIconRegistry
+// .addSvgIcon('thumb-up', '/demo-app/icon/assets/thumbup-icon.svg')
+// .addSvgIconSetInNamespace('core', '/demo-app/icon/assets/core-icon-set.svg')
+// .registerFontClassAlias('fontawesome', 'fa');
+var http_1 = require('@angular/http');
+var icon_registry_1 = require('../components/icon/icon-registry');
+var live_announcer_1 = require('../core/live-announcer/live-announcer'); //--use in provider
+var overlay_1 = require('../core/overlay/overlay');
+var overlay_container_1 = require('../core/overlay/overlay-container');
+var MdGestureConfig_1 = require('../core/gestures/MdGestureConfig');
+var platform_browser_1 = require('@angular/platform-browser');
 var card_demo_1 = require('./card/card-demo');
 var button_demo_1 = require('./button/button-demo');
 var icon_demo_1 = require('./icon/icon-demo');
@@ -32,7 +45,6 @@ var input_demo_1 = require('./input/input-demo');
 var live_announcer_demo_1 = require('./live-announcer/live-announcer-demo');
 var gestures_demo_1 = require('./gestures/gestures-demo');
 var grid_list_demo_1 = require('./grid-list/grid-list-demo');
-//import { AppComponent } from '../app/app.component';
 var Home = (function () {
     function Home() {
     }
@@ -52,7 +64,6 @@ var DemoApp = (function () {
     DemoApp = __decorate([
         core_1.Component({
             selector: 'demo-app',
-            providers: [],
             templateUrl: 'demo-app/demo-app.html',
             styleUrls: ['demo-app/demo-app.css'],
             directives: [
@@ -64,7 +75,11 @@ var DemoApp = (function () {
                 list_1.MD_LIST_DIRECTIVES,
                 toolbar_1.MdToolbar,
             ],
-            pipes: []
+            providers: [
+                core_2.provide(overlay_1.OVERLAY_CONTAINER_TOKEN, { useValue: overlay_container_1.createOverlayContainer() }),
+                core_2.provide(platform_browser_1.HAMMER_GESTURE_CONFIG, { useClass: MdGestureConfig_1.MdGestureConfig }),
+                http_1.HTTP_PROVIDERS, icon_registry_1.MdIconRegistry, live_announcer_1.MdLiveAnnouncer
+            ]
         }),
         router_1.Routes([
             new router_1.Route({ path: '/', component: Home }),
