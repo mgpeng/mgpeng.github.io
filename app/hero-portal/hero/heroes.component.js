@@ -26,7 +26,7 @@ var HeroesComponent = (function () {
         this.getHeroes();
     };
     HeroesComponent.prototype.gotoDetail = function () {
-        this._router.navigateByUrl("app/hero-portal/detail/" + this.selectedHero.id);
+        this._router.navigateByUrl("/hero-portal/detail/" + this.selectedHero.id);
         //  this._router.createUrlTree([`app/hero-portal/detail/${this.selectedHero.id}`], this._segment);
     };
     HeroesComponent = __decorate([

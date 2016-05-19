@@ -32,7 +32,7 @@ var input_demo_1 = require('./input/input-demo');
 var live_announcer_demo_1 = require('./live-announcer/live-announcer-demo');
 var gestures_demo_1 = require('./gestures/gestures-demo');
 var grid_list_demo_1 = require('./grid-list/grid-list-demo');
-var app_component_1 = require('../app/app.component');
+//import { AppComponent } from '../app/app.component';
 var Home = (function () {
     function Home() {
     }
@@ -84,7 +84,6 @@ var DemoApp = (function () {
             new router_1.Route({ path: '/live-announcer', component: live_announcer_demo_1.LiveAnnouncerDemo }),
             new router_1.Route({ path: '/gestures', component: gestures_demo_1.GesturesDemo }),
             new router_1.Route({ path: '/grid-list', component: grid_list_demo_1.GridListDemo }),
-            new router_1.Route({ path: '/app', component: app_component_1.AppComponent }),
         ]), 
         __metadata('design:paramtypes', [])
     ], DemoApp);

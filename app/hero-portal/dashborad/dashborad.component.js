@@ -29,9 +29,9 @@ var DashboradComponent = (function () {
     DashboradComponent.prototype.gotoDetail = function (hero) {
         var link = ['detail', { id: hero.id }];
         var id = hero.id;
-        this._router.navigateByUrl("app/hero-portal/detail/" + id);
+        this._router.navigateByUrl("/hero-portal/detail/" + id);
         console.log("ck pnt dashborad");
-        // router.navigateByUrl("//11");
+        // router.navigateByUrl("//11");      app/hero-portal
     };
     DashboradComponent = __decorate([
         core_1.Component({

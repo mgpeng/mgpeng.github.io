@@ -10,8 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var button_1 = require('../components/button/button');
+var icon_1 = require('../components/icon/icon');
 var hero_portal_component_1 = require('./hero-portal/hero-portal.component');
 var todo_portal_component_1 = require('./todo-portal/todo-portal.component');
+var downup_animation_component_1 = require('./xxj-animation/downup-animation.component');
 var Element = (function () {
     function Element(nodeName, parent) {
         this.nodeName = nodeName;
@@ -31,14 +34,15 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n             <h1>{{title}}</h1>\n             <hr>\n             <nav>\n             <a [routerLink]=\"['hero-portal']\">Hero-Portal</a> \n             <a [routerLink]=\"['todo-portal']\">Todo-Portal</a> \n             </nav>\n             <router-outlet></router-outlet>\n    ",
+            template: "\n             <h1>{{title}}</h1>\n             <hr>\n             <nav>\n             <a [routerLink]=\"['hero-portal']\" md-fab color=\"primary\">Hero-Portal</a> \n             <a [routerLink]=\"['todo-portal']\" md-raised-button color=\"accent\">Todo-Portal</a> \n             <a [routerLink]=\"['xxj-animation']\" md-raised-button color=\"accent\">DownupAnimation</a>\n             </nav>\n             <router-outlet></router-outlet>\n    ",
             styleUrls: ["app/app.component.css"],
-            directives: [router_1.ROUTER_DIRECTIVES],
+            directives: [router_1.ROUTER_DIRECTIVES, button_1.MdButton, button_1.MdAnchor, icon_1.MdIcon],
             providers: []
         }),
         router_1.Routes([
             new router_1.Route({ path: '/hero-portal', component: hero_portal_component_1.HeroPortalComponent }),
-            new router_1.Route({ path: '/todo-portal', component: todo_portal_component_1.TodoPortalComponent })
+            new router_1.Route({ path: '/todo-portal', component: todo_portal_component_1.TodoPortalComponent }),
+            new router_1.Route({ path: '/xxj-animation', component: downup_animation_component_1.DownupAnimationComponent })
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

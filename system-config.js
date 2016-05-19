@@ -29,7 +29,7 @@ var barrels = [
     '@angular/compiler',
     '@angular/http',
     '@angular/router',
-    '@angular/route-deperecated',
+    // '@angular/route-deperecated',
     '@angular/platform-browser',
     '@angular/platform-browser-dynamic',
     // Thirdparty barrels.

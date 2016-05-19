@@ -39,7 +39,7 @@ var TodoListComponent = (function () {
     TodoListComponent = __decorate([
         core_1.Component({
             selector: "todo-list",
-            template: "\n      <ul class=\"list-unstyled\" >\n        <li *ngFor=\"#todo of todoListIn #i=index\">\n            <input type=\"checkbox\" [(ngModel)]=\"todo.done\" (click)=\"checkTask(i)\"/>\n            <span class=\"done-{{todo.done}}\"  [ngClass]='setClasses()'\n                  >{{todo.text}}</span>\n        </li>\n      </ul>\n    ",
+            template: "\n      <ul class=\"list-unstyled\" >\n        <li *ngFor=\"let todo of todoListIn let i=index\">\n            <input type=\"checkbox\" [(ngModel)]=\"todo.done\" (click)=\"checkTask(i)\"/>\n            <span class=\"done-{{todo.done}}\"  [ngClass]='setClasses()'\n                  >{{todo.text}}</span>\n        </li>\n      </ul>\n    ",
             styleUrls: ['../app/todo-portal/todo-list/todo-list.component.css'],
             directives: [common_1.NgClass]
         }), 
