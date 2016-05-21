@@ -30,14 +30,23 @@ var Element = (function () {
 exports.Element = Element;
 ;
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(_r) {
+        this._r = _r;
         this.title = 'This is Home';
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this._r.navigate(['/hero-portal']);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n             <md-nav-list class=\"xxj-md-nav-list\">\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['hero-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Hero-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['todo-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Todo-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['xxj-animation']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">DownupAnimation</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['demo-app']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">M2 Demo</a> \n                </md-list-item>\n             </md-nav-list>\n             <router-outlet></router-outlet>\n             <hr>\n    ",
+            template: "\n             <md-nav-list class=\"xxj-md-nav-list\">\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['hero-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Hero-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['todo-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Todo-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['xxj-animation']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">DownupAnimation</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['demo-app']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">M2 Demo</a> \n                </md-list-item>\n             </md-nav-list>\n             \n             <div>\n             <router-outlet></router-outlet>\n             </div>\n             <hr>\n    ",
             styleUrls: ["app/app.component.css"],
+            host: {
+                'margin-top': '1em',
+                'position': "absolute",
+                "bottom": "1%"
+            },
             directives: [router_1.ROUTER_DIRECTIVES, button_1.MdButton, button_1.MdAnchor]
         }),
         router_1.Routes([
@@ -46,7 +55,7 @@ var AppComponent = (function () {
             new router_1.Route({ path: '/xxj-animation', component: downup_animation_component_1.DownupAnimationComponent }),
             new router_1.Route({ path: '/demo-app', component: demo_app_1.DemoApp })
         ]), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());

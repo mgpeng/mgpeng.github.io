@@ -1,28 +1,17 @@
-h1 {
-  font-size: 1.2em;
-  color: #999;
-  margin-bottom: 0;
-}
-h2 {
-  font-size: 2em;
-  margin-top: 0;
-  padding-top: 0;
-}
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-top: 10px;
+.hero-portal {
+  background: #5cd65c; }
+
+:host(.heroContainer) {
   display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
-}
-nav a:visited, a:link {
-  color: #607D8B;
-}
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-nav a.router-link-active {
-  color: #039be5;
-}
+  position: fixed;
+  width: 100%;
+  -webkit-transition: all ease-in 0.5s;
+  transition: all ease-in 0.5s; }
+
+:host(.heroContainer.ng-enter) {
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8); }
+
+:host(.heroContainer.ng-enter-active) {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1); }

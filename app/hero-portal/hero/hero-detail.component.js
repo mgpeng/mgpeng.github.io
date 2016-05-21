@@ -13,10 +13,11 @@ var router_1 = require('@angular/router');
 var hero_service_1 = require('../service/hero.service');
 var dialog_service_1 = require('../../app-service/dialog.service');
 var HeroDetailComponent = (function () {
-    function HeroDetailComponent(_hService, _dService, _rSegment) {
+    function HeroDetailComponent(_hService, _dService, _rSegment, _r) {
         this._hService = _hService;
         this._dService = _dService;
         this._rSegment = _rSegment;
+        this._r = _r;
     }
     HeroDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -28,7 +29,7 @@ var HeroDetailComponent = (function () {
         });
     };
     HeroDetailComponent.prototype.goBack = function () {
-        window.history.back();
+        this._r.navigate(['/hero-portal/hero']);
     };
     HeroDetailComponent.prototype.reset = function () {
         this.hero.name = this.unchangeStr;
@@ -46,7 +47,7 @@ var HeroDetailComponent = (function () {
             styleUrls: ["app/hero-portal/hero/hero-detail.component.css"],
             providers: [hero_service_1.HeroService, dialog_service_1.DialogService]
         }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService, dialog_service_1.DialogService, router_1.RouteSegment])
+        __metadata('design:paramtypes', [hero_service_1.HeroService, dialog_service_1.DialogService, router_1.RouteSegment, router_1.Router])
     ], HeroDetailComponent);
     return HeroDetailComponent;
 }());

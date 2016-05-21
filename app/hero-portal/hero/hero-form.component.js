@@ -9,14 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
 var hero_1 = require('./hero');
 var power_service_1 = require('../service/power.service');
 var hero_service_1 = require('../service/hero.service');
 var HeroFormComponent = (function () {
-    function HeroFormComponent(_pService, _hService) {
+    function HeroFormComponent(_pService, _hService, _r) {
         this._pService = _pService;
         this._hService = _hService;
+        this._r = _r;
         this.submibtted = false;
         this.model = new hero_1.Hero(999, "", "");
         this.maxId = 0;
@@ -44,7 +46,7 @@ var HeroFormComponent = (function () {
         configurable: true
     });
     HeroFormComponent.prototype.goBack = function () {
-        window.history.back();
+        this._r.navigate(['/hero-portal/hero']);
     };
     HeroFormComponent = __decorate([
         core_1.Component({
@@ -56,7 +58,7 @@ var HeroFormComponent = (function () {
             directives: [common_1.NgForm],
             providers: [power_service_1.PowerService, hero_service_1.HeroService]
         }), 
-        __metadata('design:paramtypes', [power_service_1.PowerService, hero_service_1.HeroService])
+        __metadata('design:paramtypes', [power_service_1.PowerService, hero_service_1.HeroService, router_1.Router])
     ], HeroFormComponent);
     return HeroFormComponent;
 }());

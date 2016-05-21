@@ -10,22 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-//import { HeroService } from '../hero-portal/service/hero.service';
+var platform_browser_1 = require('@angular/platform-browser');
 var heroes_component_1 = require('../hero-portal/hero/heroes.component');
 var hero_detail_component_1 = require('../hero-portal/hero/hero-detail.component');
 var dashborad_component_1 = require('../hero-portal/dashborad/dashborad.component');
 var hero_form_component_1 = require('../hero-portal/hero/hero-form.component');
 var HeroPortalComponent = (function () {
-    function HeroPortalComponent(_rtr) {
+    function HeroPortalComponent(_rtr, _t) {
         this._rtr = _rtr;
+        this._t = _t;
         this.title = 'Tour of Heroes';
+        this._t.setTitle("You in Hero-Portal");
     }
     HeroPortalComponent = __decorate([
         core_1.Component({
             selector: 'my-enter-hero',
-            template: "\n             <h1>{{title}}</h1>\n             <hr>\n             <nav>\n             <a [routerLink]=\"['dashborad']\">Dashborad</a> \n             <a [routerLink]=\"['hero']\">Heroes</a>\n             <a [routerLink]=\"['hero-form']\">+</a>\n             </nav>\n             <router-outlet></router-outlet>\n    ",
-            styleUrls: ["app/app.component.css"],
-            directives: [router_1.ROUTER_DIRECTIVES]
+            templateUrl: "app/hero-portal/hero-portal.component.html",
+            styleUrls: ["app/hero-portal/hero-portal.component.css"],
+            host: { "class": "ng-animate heroContainer" },
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [platform_browser_1.Title]
         }),
         router_1.Routes([
             new router_1.Route({ path: '/dashborad', component: dashborad_component_1.DashboradComponent }),
@@ -33,7 +37,7 @@ var HeroPortalComponent = (function () {
             new router_1.Route({ path: '/detail/:id', component: hero_detail_component_1.HeroDetailComponent }),
             new router_1.Route({ path: '/hero-form', component: hero_form_component_1.HeroFormComponent })
         ]), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, platform_browser_1.Title])
     ], HeroPortalComponent);
     return HeroPortalComponent;
 }());

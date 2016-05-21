@@ -1,6 +1,5 @@
 .demo-root {
-  // position:relative;
-  // top:15%;
+  margin:0.2em;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 
   // Helps fonts on OSX looks more consistent with other systems
@@ -17,17 +16,17 @@
       width: 100%;
       position: relative;
       bottom: 0;
-      margin: 24px 0;
+      margin: 1.5em 0;
     }
   }
 
   .demo-content {
-    padding: 32px;
+    padding: 2em;
   }
 
   md-toolbar {
     md-icon {
-      padding: 20px;
+      padding: 0.25em;
       cursor: pointer;
     }
 
@@ -39,6 +38,6 @@
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 1em;
   }
 }

@@ -1,0 +1,19 @@
+   .hero-portal {
+        background: #5cd65c;
+    }
+    
+    :host(.heroContainer) {
+        display: inline-block;
+        position: fixed;
+        width: 100%;
+        -webkit-transition: all ease-in 0.5s;
+        transition: all ease-in 0.5s;
+    }
+    
+    :host(.heroContainer.ng-enter) {
+        transform: scaleX(0.8);
+    }
+    
+    :host(.heroContainer.ng-enter-active) {
+        transform: scaleX(1);
+    }
