@@ -13,6 +13,7 @@ var router_1 = require('@angular/router');
 var button_1 = require('../components/button/button');
 //import {MdIcon} from '../components/icon/icon';
 //import {MD_LIST_DIRECTIVES} from '../components/list/list';
+var page_scroll_directive_1 = require('./page-scroll-directive/page-scroll.directive');
 var hero_portal_component_1 = require('./hero-portal/hero-portal.component');
 var todo_portal_component_1 = require('./todo-portal/todo-portal.component');
 var downup_animation_component_1 = require('./xxj-animation/downup-animation.component');
@@ -40,14 +41,17 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n             <md-nav-list class=\"xxj-md-nav-list\">\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['hero-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Hero-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['todo-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Todo-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['xxj-animation']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">DownupAnimation</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['demo-app']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">M2 Demo</a> \n                </md-list-item>\n             </md-nav-list>\n             \n             <div>\n             <router-outlet></router-outlet>\n             </div>\n             <hr>\n    ",
+            template: "\n             <md-nav-list class=\"xxj-md-nav-list\">\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['hero-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Hero-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['todo-portal']\"  \n                       pageScroll href=\"#anchor2\"\n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Todo-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['xxj-animation']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">DownupAnimation</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['demo-app']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">M2 Demo</a> \n                </md-list-item>\n             </md-nav-list>\n             \n             <div>\n             <router-outlet></router-outlet>\n             </div>\n             <hr>\n    ",
             styleUrls: ["app/app.component.css"],
             host: {
                 'margin-top': '1em',
                 'position': "absolute",
                 "bottom": "1%"
             },
-            directives: [router_1.ROUTER_DIRECTIVES, button_1.MdButton, button_1.MdAnchor]
+            directives: [router_1.ROUTER_DIRECTIVES,
+                button_1.MdButton, button_1.MdAnchor,
+                page_scroll_directive_1.PageScroll
+            ]
         }),
         router_1.Routes([
             new router_1.Route({ path: '/hero-portal', component: hero_portal_component_1.HeroPortalComponent }),

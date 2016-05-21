@@ -17,3 +17,10 @@
     :host(.heroContainer.ng-enter-active) {
         transform: scaleX(1);
     }
+    :host(.heroContainer.ng-leave) {
+        transform: scaleX(1);
+    }
+    
+    :host(.heroContainer.ng-leave-active) {
+        transform: scaleX(0.8);
+    }
