@@ -1,14 +1,15 @@
 .xxj-md-nav-list {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   .xxj-md-list-item{
     text-align: center;
     .xxj-md-raised-button{
-          font-size: 1em;
+          font-size: 0.8em;
           padding: 0.5em;
           padding-top: 0.2em;
           padding-bottom: 0.2em;
+          
     }
   }
 }

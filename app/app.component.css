@@ -3,9 +3,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -13,7 +13,7 @@
   .xxj-md-nav-list .xxj-md-list-item {
     text-align: center; }
     .xxj-md-nav-list .xxj-md-list-item .xxj-md-raised-button {
-      font-size: 1em;
+      font-size: 0.8em;
       padding: 0.5em;
       padding-top: 0.2em;
       padding-bottom: 0.2em; }
