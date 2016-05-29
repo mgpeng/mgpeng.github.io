@@ -1,5 +1,5 @@
 import { ElementRef } from '@angular/core';
-export declare class HighlightDirective {
+export declare class XxjHighlightDirective {
     private _el;
     xxjHighlight: string;
     private el;

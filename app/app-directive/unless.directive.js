@@ -10,7 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var core_2 = require('@angular/core');
-//import { AnimationBuilder } from '@angular/platform-browser/src/animate/animation_builder';
 var UnlessDirective = (function () {
     function UnlessDirective(templateRef, viewContainer) {
         this.templateRef = templateRef;
@@ -18,8 +17,6 @@ var UnlessDirective = (function () {
     }
     Object.defineProperty(UnlessDirective.prototype, "myUnless", {
         set: function (condition) {
-            console.log(this.viewContainer);
-            console.log(this.templateRef);
             if (!condition) {
                 this.viewContainer.createEmbeddedView(this.templateRef);
             }

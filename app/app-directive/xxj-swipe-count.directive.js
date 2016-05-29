@@ -10,12 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var XxjSwipeCountDirective = (function () {
-    function XxjSwipeCountDirective() {
+    function XxjSwipeCountDirective(_el) {
+        this._el = _el;
         this.swipeNumber = 0;
+        this.text = "";
     }
     XxjSwipeCountDirective.prototype.onSwipe = function (el) {
         this.swipeNumber++;
-        console.log(el, " you swipe ", this.swipeNumber);
+        var str = this._el.nativeElement.textContent;
+        str = str + '<br> you swipe ' + this.swipeNumber;
+        this._el.nativeElement.textContent = str;
     };
     __decorate([
         core_1.HostListener('swipe', ['$event.target']), 
@@ -25,9 +29,9 @@ var XxjSwipeCountDirective = (function () {
     ], XxjSwipeCountDirective.prototype, "onSwipe", null);
     XxjSwipeCountDirective = __decorate([
         core_1.Directive({
-            selector: "div[swipe-count]"
+            selector: "[swipe-count]"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [core_1.ElementRef])
     ], XxjSwipeCountDirective);
     return XxjSwipeCountDirective;
 }());

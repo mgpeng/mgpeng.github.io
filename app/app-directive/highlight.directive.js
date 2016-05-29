@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var HighlightDirective = (function () {
-    function HighlightDirective(_el) {
+var XxjHighlightDirective = (function () {
+    function XxjHighlightDirective(_el) {
         this._el = _el;
         this.el = this._el.nativeElement;
     }
-    HighlightDirective.prototype.onMouseEnter = function () { this.highlight(this.xxjHighlight); };
-    HighlightDirective.prototype.onMouseLeave = function () { this.highlight(null); };
-    HighlightDirective.prototype.highlight = function (color) {
+    XxjHighlightDirective.prototype.onMouseEnter = function () { this.highlight(this.xxjHighlight); };
+    XxjHighlightDirective.prototype.onMouseLeave = function () { this.highlight(null); };
+    XxjHighlightDirective.prototype.highlight = function (color) {
         this.el.style.backgroundColor = color;
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], HighlightDirective.prototype, "xxjHighlight", void 0);
-    HighlightDirective = __decorate([
+    ], XxjHighlightDirective.prototype, "xxjHighlight", void 0);
+    XxjHighlightDirective = __decorate([
         core_1.Directive({
             selector: '[xxjHighlight]',
             host: {
@@ -32,8 +32,8 @@ var HighlightDirective = (function () {
             }
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
-    ], HighlightDirective);
-    return HighlightDirective;
+    ], XxjHighlightDirective);
+    return XxjHighlightDirective;
 }());
-exports.HighlightDirective = HighlightDirective;
+exports.XxjHighlightDirective = XxjHighlightDirective;
 //# sourceMappingURL=highlight.directive.js.map
