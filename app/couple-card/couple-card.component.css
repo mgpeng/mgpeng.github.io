@@ -1,0 +1,26 @@
+.couple-card-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
+  .couple-card-container md-card {
+    margin: 0 16px 16px 0;
+    width: 350px; }
+  .couple-card-container img {
+    background-color: gray; }
+
+.couple-card-blue {
+  background-color: #B0BECC; }
+  .couple-card-blue md-card-actions {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }

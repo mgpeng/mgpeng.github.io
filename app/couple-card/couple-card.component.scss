@@ -1,0 +1,22 @@
+.couple-card-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  md-card {
+    margin: 0 16px 16px 0;
+    width: 350px;
+  }
+
+  img {
+    background-color: gray;
+  }
+}
+
+.couple-card-blue {
+  background-color: #B0BECC;
+
+  md-card-actions {
+    display: flex;
+    flex-direction: column;
+  }
+}

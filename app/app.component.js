@@ -18,6 +18,9 @@ var hero_portal_component_1 = require('./hero-portal/hero-portal.component');
 var todo_portal_component_1 = require('./todo-portal/todo-portal.component');
 var downup_animation_component_1 = require('./xxj-animation/downup-animation.component');
 var demo_app_1 = require('../demo-app/demo-app');
+var couple_card_component_1 = require('./couple-card/couple-card.component');
+var top_frame_component_1 = require('./top-frame/top-frame.component');
+//import { PromiseCompleter,PromiseWrapper } from '@angular/platform-browser-dynamic/esm/src/facade/promise';
 var Element = (function () {
     function Element(nodeName, parent) {
         this.nodeName = nodeName;
@@ -31,38 +34,52 @@ var Element = (function () {
 exports.Element = Element;
 ;
 var AppComponent = (function () {
-    function AppComponent(_r) {
+    function AppComponent(_r, _renderer, _el) {
         this._r = _r;
+        this._renderer = _renderer;
+        this._el = _el;
         this.title = 'This is Home';
+        this.htmlString = "<h1>test</h1>";
     }
     AppComponent.prototype.ngOnInit = function () {
         this._r.navigate(['/hero-portal']);
+        // console.log(this._pw);
+        // console.log(this._pc);  
+        //        private _pw:PromiseWrapper,private _pc:PromiseCompleter<string>
+        // let el=this._el.nativeElement;
+        // console.log(el);
+        // this._renderer.attachViewAfter(el, ["<h1>test</h1>","<span>hihi</span>"]);;
+        // console.log(this._renderer);
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n             <md-nav-list class=\"xxj-md-nav-list\">\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['hero-portal']\"  \n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Hero-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['todo-portal']\"  \n                       pageScroll href=\"#anchor2\"\n                       md-raised-button color=\"primary\"\n                       class=\"xxj-md-raised-button\">Todo-Portal</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['xxj-animation']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">DownupAnimation</a> \n                </md-list-item>\n                <md-list-item class=\"xxj-md-list-item\">\n                    <a [routerLink]=\"['demo-app']\"  \n                    md-raised-button color=\"primary\"\n                    class=\"xxj-md-raised-button\">M2 Demo</a> \n                </md-list-item>\n             </md-nav-list>\n             \n             <div>\n             <router-outlet></router-outlet>\n             </div>\n             <hr>\n    ",
+            templateUrl: "app/app.component.html",
             styleUrls: ["app/app.component.css"],
             host: {
                 'margin-top': '1em',
                 'position': "absolute",
                 "bottom": "1%"
             },
-            directives: [router_1.ROUTER_DIRECTIVES,
+            directives: [
+                router_1.ROUTER_DIRECTIVES,
                 button_1.MdButton, button_1.MdAnchor,
-                page_scroll_directive_1.PageScroll
-            ]
+                page_scroll_directive_1.PageScroll, top_frame_component_1.TopFrameComponent
+            ],
+            providers: []
         }),
         router_1.Routes([
             new router_1.Route({ path: '/hero-portal', component: hero_portal_component_1.HeroPortalComponent }),
             new router_1.Route({ path: '/todo-portal', component: todo_portal_component_1.TodoPortalComponent }),
             new router_1.Route({ path: '/xxj-animation', component: downup_animation_component_1.DownupAnimationComponent }),
-            new router_1.Route({ path: '/demo-app', component: demo_app_1.DemoApp })
+            new router_1.Route({ path: '/demo-app', component: demo_app_1.DemoApp }),
+            new router_1.Route({ path: '/couple-card', component: couple_card_component_1.CoupleCard })
         ]), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, core_1.Renderer, core_1.ElementRef])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-//---add comment for testing
+//-----insert html to component template use ElementRef and Renderer don't know how until now
+//-----because Renderer.attchViewAfter(node,viewRootNode)  node ,viewRootNode is what? 
 //# sourceMappingURL=app.component.js.map

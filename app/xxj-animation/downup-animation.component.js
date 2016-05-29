@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var downup_animation_directive_1 = require('../app-directive/downup.animation.directive');
 var unless_directive_1 = require('../app-directive/unless.directive');
+var xxj_swipe_count_directive_1 = require('../app-directive/xxj-swipe-count.directive');
 var DownupAnimationComponent = (function () {
     function DownupAnimationComponent() {
         this.condition = true;
@@ -24,9 +25,9 @@ var DownupAnimationComponent = (function () {
     DownupAnimationComponent = __decorate([
         core_1.Component({
             selector: 'downupAnimation',
-            template: "\n    <div downup-box #box=\"downup\" style=\"height:0; width:50%; overflow: hidden;\">Some content</div>\n    <button (click)=\"box.toggle(visible = !visible)\">Animate</button>\n    <br><hr>\n    <p *myUnless=\"condition\">\n       condition is false and myUnless is true.\n    </p>\n    <hr>\n    <p *myUnless=\"!condition\">\n       condition is true and myUnless is false.\n    </p>\n    <hr>\n    <button (click)=\"changeShow()\">{{condition ? \"show\" :\"hide\"}}</button>\n\t",
+            template: "\n    <div downup-box #box=\"downup\" style=\"height:0; width:50%; overflow: hidden;\">Some content</div>\n    <button (click)=\"box.toggle(visible = !visible)\">Animate</button>\n    <br><hr>\n    <p *myUnless=\"condition\">\n       condition is false and myUnless is true.\n    </p>\n    <hr>\n    <p *myUnless=\"!condition\">\n       condition is true and myUnless is false.\n    </p>\n    <hr>\n    <button (click)=\"changeShow()\">{{condition ? \"show\" :\"hide\"}}</button>\n    <br><hr>\n    <div swipe-count>Counting how many swipes</div>\n\t",
             styles: ["\n            button {font-size:1.2em;width:6em;height:1.5em; background-color:grey;}\n        "],
-            directives: [downup_animation_directive_1.DownupBox, unless_directive_1.UnlessDirective]
+            directives: [downup_animation_directive_1.DownupBox, unless_directive_1.UnlessDirective, xxj_swipe_count_directive_1.XxjSwipeCountDirective]
         }), 
         __metadata('design:paramtypes', [])
     ], DownupAnimationComponent);

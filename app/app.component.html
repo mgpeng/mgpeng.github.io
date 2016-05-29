@@ -1,0 +1,37 @@
+
+<top-frame></top-frame>
+    
+<md-list class="xxj-md-nav-list">
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['hero-portal']"  
+            md-raised-button color="primary"
+            class="xxj-md-raised-button">Hero-Portal</a> 
+    </md-list-item>
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['todo-portal']"  
+            pageScroll href="#head"
+            md-raised-button color="primary"
+            class="xxj-md-raised-button">Todo-Portal</a> 
+    </md-list-item>
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['xxj-animation']"  
+        md-raised-button color="primary"
+        class="xxj-md-raised-button">DownupAnimation</a> 
+    </md-list-item>
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['demo-app']"  
+        md-raised-button color="primary"
+        class="xxj-md-raised-button">M2 Demo</a> 
+    </md-list-item>
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['couple-card']"  
+        md-raised-button color="primary"
+        class="xxj-md-raised-button">Couple Card</a> 
+    </md-list-item>
+</md-list>
+    <!--<div [innerHTML]="htmlString"></div>-->
+    <div>
+    <router-outlet></router-outlet>
+    </div>
+    <hr>
+    

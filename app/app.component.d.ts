@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { OnInit, Renderer, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 export declare class Element {
     private nodeName;
@@ -8,7 +8,10 @@ export declare class Element {
 }
 export declare class AppComponent implements OnInit {
     private _r;
+    private _renderer;
+    private _el;
     title: string;
-    constructor(_r: Router);
+    htmlString: string;
+    constructor(_r: Router, _renderer: Renderer, _el: ElementRef);
     ngOnInit(): void;
 }
