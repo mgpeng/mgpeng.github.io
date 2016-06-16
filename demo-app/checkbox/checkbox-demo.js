@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
-var checkbox_1 = require('../../components/checkbox/checkbox');
+var checkbox_1 = require('@angular2-material/checkbox');
 var MdCheckboxDemoNestedChecklist = (function () {
     function MdCheckboxDemoNestedChecklist() {
         this.tasks = [

@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var button_1 = require('../../components/button/button');
-var progress_circle_1 = require('../../components/progress-circle/progress-circle');
+var button_1 = require('@angular2-material/button');
+var progress_circle_1 = require('@angular2-material/progress-circle');
 var ProgressCircleDemo = (function () {
     function ProgressCircleDemo() {
         this.progressValue = 40;

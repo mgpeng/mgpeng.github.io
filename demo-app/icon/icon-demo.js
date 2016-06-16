@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var icon_1 = require('../../components/icon/icon');
+var icon_1 = require('@angular2-material/icon');
 var IconDemo = (function () {
     function IconDemo(mdIconRegistry) {
         mdIconRegistry

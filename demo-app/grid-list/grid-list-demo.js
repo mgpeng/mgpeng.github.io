@@ -9,9 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var grid_list_1 = require('../../components/grid-list/grid-list');
-var button_1 = require('../../components/button/button');
-var card_1 = require('../../components/card/card');
+var grid_list_1 = require('@angular2-material/grid-list');
+var button_1 = require('@angular2-material/button');
+var card_1 = require('@angular2-material/card');
 var GridListDemo = (function () {
     function GridListDemo() {
         this.tiles = [

@@ -10,7 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var button_1 = require('../components/button/button');
+//import {MdButton, MdAnchor} from '../components/button/button';
+var button_1 = require('@angular2-material/button');
 //import {MdIcon} from '../components/icon/icon';
 //import {MD_LIST_DIRECTIVES} from '../components/list/list';
 var page_scroll_directive_1 = require('./page-scroll-directive/page-scroll.directive');
@@ -19,8 +20,9 @@ var todo_portal_component_1 = require('./todo-portal/todo-portal.component');
 var downup_animation_component_1 = require('./xxj-animation/downup-animation.component');
 var demo_app_1 = require('../demo-app/demo-app');
 var couple_card_component_1 = require('./couple-card/couple-card.component');
+var use_broadcast_parent_component_1 = require('./use-custom-broadcast/use-broadcast-parent.component');
+var need_load_component_component_1 = require('./load-component-in/need-load-component.component');
 var top_frame_component_1 = require('./top-frame/top-frame.component');
-//import { PromiseCompleter,PromiseWrapper } from '@angular/platform-browser-dynamic/esm/src/facade/promise';
 var Element = (function () {
     function Element(nodeName, parent) {
         this.nodeName = nodeName;
@@ -43,13 +45,6 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.ngOnInit = function () {
         this._r.navigate(['/hero-portal']);
-        // console.log(this._pw);
-        // console.log(this._pc);  
-        //        private _pw:PromiseWrapper,private _pc:PromiseCompleter<string>
-        // let el=this._el.nativeElement;
-        // console.log(el);
-        // this._renderer.attachViewAfter(el, ["<h1>test</h1>","<span>hihi</span>"]);;
-        // console.log(this._renderer);
     };
     AppComponent = __decorate([
         core_1.Component({
@@ -73,7 +68,9 @@ var AppComponent = (function () {
             new router_1.Route({ path: '/todo-portal', component: todo_portal_component_1.TodoPortalComponent }),
             new router_1.Route({ path: '/xxj-animation', component: downup_animation_component_1.DownupAnimationComponent }),
             new router_1.Route({ path: '/demo-app', component: demo_app_1.DemoApp }),
-            new router_1.Route({ path: '/couple-card', component: couple_card_component_1.CoupleCard })
+            new router_1.Route({ path: '/couple-card', component: couple_card_component_1.CoupleCard }),
+            new router_1.Route({ path: '/use-custom-broadcast', component: use_broadcast_parent_component_1.UseBroadcastParentComponent }),
+            new router_1.Route({ path: '/load-component-in', component: need_load_component_component_1.NeedLoadComponentComponent })
         ]), 
         __metadata('design:paramtypes', [router_1.Router, core_1.Renderer, core_1.ElementRef])
     ], AppComponent);

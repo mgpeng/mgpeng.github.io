@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var radio_1 = require('../../components/radio/radio');
-var radio_dispatcher_1 = require('../../components/radio/radio_dispatcher');
+var radio_1 = require('@angular2-material/radio');
+var radio_dispatcher_1 = require('@angular2-material/radio/radio_dispatcher');
 var RadioDemo = (function () {
     function RadioDemo() {
         this.isDisabled = false;

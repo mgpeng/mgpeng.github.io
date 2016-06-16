@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var button_1 = require('../../components/button/button');
-var card_1 = require('../../components/card/card');
+var button_1 = require('@angular2-material/button');
+var card_1 = require('@angular2-material/card');
 var CardDemo = (function () {
     function CardDemo() {
     }

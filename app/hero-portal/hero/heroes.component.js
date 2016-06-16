@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var hero_service_1 = require('../service/hero.service');
+var search_pipe_1 = require('../../app-pipe/search-pipe');
 var HeroesComponent = (function () {
     function HeroesComponent(_heroService, _router, _segment) {
         this._heroService = _heroService;
@@ -33,7 +34,8 @@ var HeroesComponent = (function () {
             selector: 'my-heroes',
             templateUrl: "app/hero-portal/hero/heroes.component.html",
             styleUrls: ["app/hero-portal/hero/heroes.component.css"],
-            providers: [hero_service_1.HeroService]
+            providers: [hero_service_1.HeroService],
+            pipes: [search_pipe_1.SearchPipe]
         }), 
         __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.Router, router_1.RouteSegment])
     ], HeroesComponent);

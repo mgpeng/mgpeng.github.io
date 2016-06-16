@@ -9,11 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var portal_directives_1 = require('../../core/portal/portal-directives');
-var portal_directives_2 = require('../../core/portal/portal-directives');
+var portal_directives_1 = require('@angular2-material/core/portal/portal-directives');
+var portal_directives_2 = require('@angular2-material/core/portal/portal-directives');
 var core_2 = require('@angular/core');
 var core_3 = require('@angular/core');
-var portal_1 = require('../../core/portal/portal');
+var portal_1 = require('@angular2-material/core/portal/portal');
 var PortalDemo = (function () {
     function PortalDemo() {
     }

@@ -2,7 +2,7 @@
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 //import {HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
 // import {DemoApp} from './demo-app/demo-app';
-//import {HTTP_PROVIDERS} from '@angular/http';
+var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
 //import {MdIconRegistry} from './components/icon/icon-registry';
 //import {OVERLAY_CONTAINER_TOKEN} from './core/overlay/overlay';
@@ -15,5 +15,8 @@ require('rxjs/Rx');
 var app_component_1 = require('./app/app.component');
 platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [
     router_1.ROUTER_PROVIDERS,
+    //MdLiveAnnouncer,
+    //provide(OVERLAY_CONTAINER_TOKEN, {useValue: createOverlayContainer()}),
+    http_1.HTTP_PROVIDERS,
 ]);
 //# sourceMappingURL=main.js.map

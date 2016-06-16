@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var live_announcer_1 = require('../../core/live-announcer/live-announcer');
+var live_announcer_1 = require('@angular2-material/core/live-announcer/live-announcer');
 var LiveAnnouncerDemo = (function () {
     function LiveAnnouncerDemo(live) {
         this.live = live;

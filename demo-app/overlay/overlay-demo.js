@@ -9,9 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var overlay_1 = require('../../core/overlay/overlay');
-var portal_1 = require('../../core/portal/portal');
-var portal_directives_1 = require('../../core/portal/portal-directives');
+var overlay_1 = require('@angular2-material/core/overlay/overlay');
+var portal_1 = require('@angular2-material/core/portal/portal');
+var portal_directives_1 = require('@angular2-material/core/portal/portal-directives');
 var OverlayDemo = (function () {
     function OverlayDemo(overlay, viewContainerRef) {
         this.overlay = overlay;

@@ -9,9 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var button_1 = require('../../components/button/button');
-var list_1 = require('../../components/list/list');
-var icon_1 = require('../../components/icon/icon');
+var button_1 = require('@angular2-material/button');
+var list_1 = require('@angular2-material/list');
+var icon_1 = require('@angular2-material/icon');
 var ListDemo = (function () {
     function ListDemo() {
         this.items = [

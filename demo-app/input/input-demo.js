@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var input_1 = require('../../components/input/input');
-var button_1 = require('../../components/button/button');
-var card_1 = require('../../components/card/card');
-var checkbox_1 = require('../../components/checkbox/checkbox');
-var icon_1 = require('../../components/icon/icon');
-var toolbar_1 = require('../../components/toolbar/toolbar');
+var input_1 = require('@angular2-material/input');
+var button_1 = require('@angular2-material/button');
+var card_1 = require('@angular2-material/card');
+var checkbox_1 = require('@angular2-material/checkbox');
+var icon_1 = require('@angular2-material/icon');
+var toolbar_1 = require('@angular2-material/toolbar');
 var max = 5;
 var InputDemo = (function () {
     function InputDemo() {

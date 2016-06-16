@@ -1,6 +1,6 @@
 
 <top-frame></top-frame>
-    
+ 
 <md-list class="xxj-md-nav-list" dense>
     <md-list-item class="xxj-md-list-item">
         <a [routerLink]="['hero-portal']"  
@@ -28,8 +28,18 @@
         md-raised-button color="primary"
         class="xxj-md-raised-button">Couple Card</a> 
     </md-list-item>
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['use-custom-broadcast']"  
+        md-raised-button color="primary"
+        class="xxj-md-raised-button">Custom Broadcast</a> 
+    </md-list-item>
+    <md-list-item class="xxj-md-list-item">
+        <a [routerLink]="['load-component-in']"  
+        md-raised-button color="primary"
+        class="xxj-md-raised-button">LoadInComponent</a> 
+    </md-list-item>
 </md-list>
-    <!--<div [innerHTML]="htmlString"></div>-->
+    <!--<div [testProp]="htmlString"></div>-->
     <div>
     <router-outlet></router-outlet>
     </div>
